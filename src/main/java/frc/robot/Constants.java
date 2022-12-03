@@ -15,23 +15,23 @@ public class Constants {
 
     public static final class CANDevices {
 
-        public static final int frontLeftRotationMotorId = 17;
-        public static final int frontLeftDriveMotorId = 18;
+        public static final int frontLeftRotationMotorId = 2;
+        public static final int frontLeftDriveMotorId = 9;
 
-        public static final int frontRightRotationMotorId = 11;
-        public static final int frontRightDriveMotorId = 12;
+        public static final int frontRightRotationMotorId = 4;
+        public static final int frontRightDriveMotorId = 3;
 
-        public static final int rearLeftRotationMotorId = 15;
-        public static final int rearLeftDriveMotorId = 16;
+        public static final int rearLeftRotationMotorId = 6;
+        public static final int rearLeftDriveMotorId = 5;
 
-        public static final int rearRightRotationMotorId = 13;
-        public static final int rearRightDriveMotorId = 14;
+        public static final int rearRightRotationMotorId = 8;
+        public static final int rearRightDriveMotorId = 7;
 
 
-        public static final int frontLeftRotationEncoderId = 6;
-        public static final int frontRightRotationEncoderId = 7;
-        public static final int rearLeftRotationEncoderId = 8;
-        public static final int rearRightRotationEncoderId = 9;
+        public static final int frontLeftRotationEncoderId = 9;
+        public static final int frontRightRotationEncoderId = 10;
+        public static final int rearLeftRotationEncoderId = 11;
+        public static final int rearRightRotationEncoderId = 12;
 
     }
 
@@ -53,7 +53,10 @@ public class Constants {
         static public final double MAX_ROTATE_SPEED_RAD_PER_SEC = Units.degreesToRadians(720.0);
         static public final double MAX_TRANSLATE_ACCEL_MPS2 = MAX_FWD_REV_SPEED_MPS/0.125; //0-full time of 0.25 second
         static public final double MAX_ROTATE_ACCEL_RAD_PER_SEC_2 = MAX_ROTATE_SPEED_RAD_PER_SEC/0.25; //0-full time of 0.25 second
-        
+
+        static public final int MAX_DRIVE_CURRENT = 30;
+        static public final int MAX_ROTATION_CURRENT = 20;
+
     // HELPER ORGANIZATION CONSTANTS
         static public final int FL = 0; // Front Left Module Index
         static public final int FR = 1; // Front Right Module Index

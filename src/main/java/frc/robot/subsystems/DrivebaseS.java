@@ -74,8 +74,8 @@ public class DrivebaseS extends SubsystemBase implements Loggable {
      * absolute encoder offsets for the wheels
      * 180 degrees added to offset values to invert one side of the robot so that it doesn't spin in place
      */
-    private static final double frontLeftAngleOffset =5.708331;
-    private static final double frontRightAngleOffset = 3.783; //11,12
+    private static final double frontLeftAngleOffset = 5.708331;
+    private static final double frontRightAngleOffset = 3.783;
     private static final double rearLeftAngleOffset = 1.787997;
     private static final double rearRightAngleOffset = 5.66;
 

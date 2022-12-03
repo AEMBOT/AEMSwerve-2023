@@ -22,6 +22,9 @@ import io.github.oblarg.oblog.Loggable;
 import io.github.oblarg.oblog.ShuffleboardContainerWrapper;
 import io.github.oblarg.oblog.annotations.Log;
 
+import static frc.robot.Constants.DriveConstants.MAX_DRIVE_CURRENT;
+import static frc.robot.Constants.DriveConstants.MAX_ROTATION_CURRENT;
+
 public class SwerveModule extends SubsystemBase implements Loggable{
 
     /**
@@ -131,6 +134,10 @@ public class SwerveModule extends SubsystemBase implements Loggable{
         drivePIDController = new PIDController(drivekP, 0, 0.1);
         // Give this module a unique name on the dashboard so we have four separate sub-tabs.
         loggingName = "SwerveModule-" + name + "-[" + driveMotor.getDeviceId() + ',' + rotationMotor.getDeviceId() + ']';
+
+        // Add Current Limits
+        driveMotor.setSmartCurrentLimit(MAX_DRIVE_CURRENT);
+        rotationMotor.setSmartCurrentLimit(MAX_ROTATION_CURRENT);
     }
 
     /**
