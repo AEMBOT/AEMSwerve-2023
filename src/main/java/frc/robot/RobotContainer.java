@@ -118,8 +118,14 @@ public class RobotContainer {
 
         configureButtonBindings();
         field.getObject("pathOTF").setTrajectory(pathPlannerTrajectory);
-        autoSelector.setDefaultOption("pathPlanner", drivebaseS.chasePoseC(()->new Pose2d(), field)
-           
+        autoSelector.setDefaultOption("pathPlanner",
+                drivebaseS.chasePoseC(()->new Pose2d(), field)
+        );
+
+        autoSelector.addOption("6443 Auto",
+                drivebaseS.pathPlannerCommand(
+                        PathPlanner.loadPath("6443Path", 5.0, 2.0, false)
+                )
         );
         
         //field.getObject("pathPlanner").setTrajectory((Trajectory) pathPlannerTrajectory);
